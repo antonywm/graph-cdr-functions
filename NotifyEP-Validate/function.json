@@ -1,0 +1,26 @@
+{
+  "bindings": [
+    {
+      "name": "Request",
+      "authLevel": "anonymous",
+      "methods": [
+        "post",
+        "get"
+      ],
+      "direction": "in",
+      "type": "httpTrigger"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "Response"
+    },
+    {
+      "name": "outputQueueItem",
+      "direction": "out",
+      "type": "queue",
+      "queueName": "receivednotifications",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
