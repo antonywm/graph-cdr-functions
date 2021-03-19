@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    {
+      "name": "QueueItem",
+      "type": "queueTrigger",
+      "direction": "in",
+      "queueName": "receivednotifications",
+      "connection": "AzureWebJobsStorage"
+    },
+    {
+      "name": "outputQueueItem",
+      "direction": "out",
+      "type": "queue",
+      "queueName": "callrecords",
+      "connection": "AzureWebJobsStorage"
+    }
+  ]
+}
