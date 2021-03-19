@@ -16,5 +16,5 @@ The Azure functions automate the steps above and are organized under folders . F
 
 - [**/Notify-Subscribe** ](https://github.com/ResonateUCC/resonatedev-graphfuncs/tree/main/Notify-Subscribe) This function creates a notification in Graph and reports on the success of the registration. It sets a 1 day expiry of the webhook and retriggers on a timer to ensure a new registration is made every day.
 
-- [**/QueueGraphTrigger** ]https://github.com/ResonateUCC/resonatedev-graphfuncs/tree/main/QueueGraphTrigger) This function will pop callId's from the notification storage queue and make an API call to Microsoft Graph to retrieve the call record. The received call record is a JSON formatted response which is pushed to another storage queue called 'callrecords' for subsequent post processing.
+- [**/QueueGraphTrigger** ](https://github.com/ResonateUCC/resonatedev-graphfuncs/tree/main/QueueGraphTrigger) This function will pop callId's from the notification storage queue and make an API call to Microsoft Graph to retrieve the call record. The received call record is a JSON formatted response which is pushed to another storage queue called 'callrecords' for subsequent post processing.
 
