@@ -23,7 +23,7 @@ $tokenRequest = Invoke-WebRequest -Method Post -Uri $AuthURI -ContentType "appli
 # Set Access Token
 $token = ($tokenRequest.Content | ConvertFrom-Json).access_token
 
-Write-Host "Sending Graph API Request..."
+Write-Host "Sending Graph API Request for callrecord [CallID: $QueueItem]"
 $callUrl="https://graph.microsoft.com/v1.0/communications/callRecords/$QueueItem"
 $headers=@{}
 $headers.Add("Authorization", "Bearer $token")
